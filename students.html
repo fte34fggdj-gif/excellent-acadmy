@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Academy - Students Data</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Excellence Academy</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attendance.html" class="nav-link">Attendance</a></li>
+                <li><a href="fees.html" class="nav-link">School Fees</a></li>
+                <li><a href="results.html" class="nav-link">Results</a></li>
+                <li><a href="students.html" class="nav-link active">Students</a></li>
+                <li><a href="teachers.html" class="nav-link">Teachers</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Students Data</h1>
+            <p class="fade-in-delay">Comprehensive student information and records</p>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section class="students-section">
+        <div class="container">
+            <!-- Search Controls -->
+            <div class="search-controls fade-in-up">
+                <input type="text" class="search-input" id="studentSearch" placeholder="Search by name, ID, or contact...">
+                <select class="filter-select" id="gradeFilter">
+                    <option value="all">All Grades</option>
+                    <option value="KG">KG</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+                <select class="filter-select" id="ageFilter">
+                    <option value="all">All Ages</option>
+                    <option value="5-7">5-7 years</option>
+                    <option value="8-10">8-10 years</option>
+                    <option value="11-13">11-13 years</option>
+                    <option value="14-16">14-16 years</option>
+                    <option value="17-18">17-18 years</option>
+                </select>
+            </div>
+
+            <!-- Students Table -->
+            <div class="table-container fade-in-up-delay">
+                <table class="students-table" id="studentsTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                            <th>Contact</th>
+                            <th>Parent/Guardian</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-grade="5" data-age="11">
+                            <td>STU001</td>
+                            <td>Ahmed Mohamed Ali</td>
+                            <td>11</td>
+                            <td>Grade 5</td>
+                            <td>+20 100 123 4567</td>
+                            <td>Mohamed Ali</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="5" data-age="10">
+                            <td>STU002</td>
+                            <td>Sara Ali Hassan</td>
+                            <td>10</td>
+                            <td>Grade 5</td>
+                            <td>+20 101 234 5678</td>
+                            <td>Ali Hassan</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="6" data-age="12">
+                            <td>STU003</td>
+                            <td>Omar Hassan Mahmoud</td>
+                            <td>12</td>
+                            <td>Grade 6</td>
+                            <td>+20 102 345 6789</td>
+                            <td>Hassan Mahmoud</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="4" data-age="9">
+                            <td>STU004</td>
+                            <td>Fatima Ahmed Ibrahim</td>
+                            <td>9</td>
+                            <td>Grade 4</td>
+                            <td>+20 103 456 7890</td>
+                            <td>Ahmed Ibrahim</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="7" data-age="13">
+                            <td>STU005</td>
+                            <td>Youssef Mahmoud Sayed</td>
+                            <td>13</td>
+                            <td>Grade 7</td>
+                            <td>+20 104 567 8901</td>
+                            <td>Mahmoud Sayed</td>
+                            <td><span class="status absent">Inactive</span></td>
+                        </tr>
+                        <tr data-grade="3" data-age="8">
+                            <td>STU006</td>
+                            <td>Nour Ibrahim Khaled</td>
+                            <td>8</td>
+                            <td>Grade 3</td>
+                            <td>+20 105 678 9012</td>
+                            <td>Ibrahim Khaled</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="8" data-age="14">
+                            <td>STU007</td>
+                            <td>Maryam Khaled Mostafa</td>
+                            <td>14</td>
+                            <td>Grade 8</td>
+                            <td>+20 106 789 0123</td>
+                            <td>Khaled Mostafa</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="2" data-age="7">
+                            <td>STU008</td>
+                            <td>Karim Mostafa Adel</td>
+                            <td>7</td>
+                            <td>Grade 2</td>
+                            <td>+20 107 890 1234</td>
+                            <td>Mostafa Adel</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="9" data-age="15">
+                            <td>STU009</td>
+                            <td>Layla Sayed Omar</td>
+                            <td>15</td>
+                            <td>Grade 9</td>
+                            <td>+20 108 901 2345</td>
+                            <td>Sayed Omar</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="1" data-age="6">
+                            <td>STU010</td>
+                            <td>Hassan Adel Farouk</td>
+                            <td>6</td>
+                            <td>Grade 1</td>
+                            <td>+20 109 012 3456</td>
+                            <td>Adel Farouk</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="10" data-age="16">
+                            <td>STU011</td>
+                            <td>Yasmin Farouk Nabil</td>
+                            <td>16</td>
+                            <td>Grade 10</td>
+                            <td>+20 110 123 4567</td>
+                            <td>Farouk Nabil</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="11" data-age="17">
+                            <td>STU012</td>
+                            <td>Amr Nabil Tamer</td>
+                            <td>17</td>
+                            <td>Grade 11</td>
+                            <td>+20 111 234 5678</td>
+                            <td>Nabil Tamer</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="12" data-age="18">
+                            <td>STU013</td>
+                            <td>Dina Tamer Waleed</td>
+                            <td>18</td>
+                            <td>Grade 12</td>
+                            <td>+20 112 345 6789</td>
+                            <td>Tamer Waleed</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="KG" data-age="5">
+                            <td>STU014</td>
+                            <td>Malak Waleed Sherif</td>
+                            <td>5</td>
+                            <td>KG</td>
+                            <td>+20 113 456 7890</td>
+                            <td>Waleed Sherif</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                        <tr data-grade="KG" data-age="5">
+                            <td>STU015</td>
+                            <td>Ziad Sherif Hany</td>
+                            <td>5</td>
+                            <td>KG</td>
+                            <td>+20 114 567 8901</td>
+                            <td>Sherif Hany</td>
+                            <td><span class="status present">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Students Statistics -->
+            <div class="students-stats fade-in-up-delay-2">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalStudents">15</div>
+                        <div class="stat-label">Total Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="activeStudents">14</div>
+                        <div class="stat-label">Active Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="averageAge">11.2</div>
+                        <div class="stat-label">Average Age</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="gradeSpread">13</div>
+                        <div class="stat-label">Grade Levels</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Excellence Academy</h3>
+                    <p>Committed to providing quality education and nurturing future leaders.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Cairo, Egypt</p>
+                    <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@excellenceacademy.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Excellence Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2001066883114" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

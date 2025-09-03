@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Academy - Attendance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Excellence Academy</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attendance.html" class="nav-link active">Attendance</a></li>
+                <li><a href="fees.html" class="nav-link">School Fees</a></li>
+                <li><a href="results.html" class="nav-link">Results</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="teachers.html" class="nav-link">Teachers</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Student Attendance</h1>
+            <p class="fade-in-delay">Track and manage daily student attendance</p>
+        </div>
+    </section>
+
+    <!-- Attendance Section -->
+    <section class="attendance-section">
+        <div class="container">
+            <div class="attendance-controls fade-in-up">
+                <div class="date-selector">
+                    <label for="attendance-date">Select Date:</label>
+                    <input type="date" id="attendance-date" value="2024-09-04">
+                </div>
+                <div class="grade-filter">
+                    <label for="grade-select">Filter by Grade:</label>
+                    <select id="grade-select">
+                        <option value="all">All Grades</option>
+                        <option value="KG">KG</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="4">Grade 4</option>
+                        <option value="5">Grade 5</option>
+                        <option value="6">Grade 6</option>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="attendance-table-container fade-in-up-delay">
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-tbody">
+                        <tr data-grade="5">
+                            <td>STU001</td>
+                            <td>Ahmed Mohamed</td>
+                            <td>Grade 5</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="5">
+                            <td>STU002</td>
+                            <td>Sara Ali</td>
+                            <td>Grade 5</td>
+                            <td><span class="status absent">Absent</span></td>
+                            <td>
+                                <button class="btn-toggle absent" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="6">
+                            <td>STU003</td>
+                            <td>Omar Hassan</td>
+                            <td>Grade 6</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="4">
+                            <td>STU004</td>
+                            <td>Fatima Ahmed</td>
+                            <td>Grade 4</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="7">
+                            <td>STU005</td>
+                            <td>Youssef Mahmoud</td>
+                            <td>Grade 7</td>
+                            <td><span class="status absent">Absent</span></td>
+                            <td>
+                                <button class="btn-toggle absent" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="3">
+                            <td>STU006</td>
+                            <td>Nour Ibrahim</td>
+                            <td>Grade 3</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="8">
+                            <td>STU007</td>
+                            <td>Maryam Khaled</td>
+                            <td>Grade 8</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="2">
+                            <td>STU008</td>
+                            <td>Karim Mostafa</td>
+                            <td>Grade 2</td>
+                            <td><span class="status absent">Absent</span></td>
+                            <td>
+                                <button class="btn-toggle absent" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="9">
+                            <td>STU009</td>
+                            <td>Layla Sayed</td>
+                            <td>Grade 9</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr data-grade="1">
+                            <td>STU010</td>
+                            <td>Hassan Adel</td>
+                            <td>Grade 1</td>
+                            <td><span class="status present">Present</span></td>
+                            <td>
+                                <button class="btn-toggle present" onclick="toggleAttendance(this)">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="attendance-summary fade-in-up-delay-2">
+                <div class="summary-card">
+                    <h3>Today's Summary</h3>
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="present-count">7</span>
+                            <span class="stat-label">Present</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="absent-count">3</span>
+                            <span class="stat-label">Absent</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="total-count">10</span>
+                            <span class="stat-label">Total</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="attendance-rate">70%</span>
+                            <span class="stat-label">Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Excellence Academy</h3>
+                    <p>Committed to providing quality education and nurturing future leaders.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Cairo, Egypt</p>
+                    <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@excellenceacademy.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Excellence Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2001066883114" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

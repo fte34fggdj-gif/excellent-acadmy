@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Academy - Results Inquiry</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Excellence Academy</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attendance.html" class="nav-link">Attendance</a></li>
+                <li><a href="fees.html" class="nav-link">School Fees</a></li>
+                <li><a href="results.html" class="nav-link active">Results</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="teachers.html" class="nav-link">Teachers</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Results Inquiry</h1>
+            <p class="fade-in-delay">Check student academic results and performance</p>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="results-form-container fade-in-up">
+                <div class="form-card">
+                    <h2>Student Results Lookup</h2>
+                    <p>Enter the student ID to view academic results and performance reports.</p>
+                    
+                    <form id="results-form" class="results-form">
+                        <div class="form-group">
+                            <label for="student-id">Student ID</label>
+                            <input type="text" id="student-id" placeholder="Enter Student ID (e.g., STU001)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="academic-year">Academic Year</label>
+                            <select id="academic-year">
+                                <option value="2024-2025">2024-2025</option>
+                                <option value="2023-2024">2023-2024</option>
+                                <option value="2022-2023">2022-2023</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester</label>
+                            <select id="semester">
+                                <option value="first">First Semester</option>
+                                <option value="second">Second Semester</option>
+                                <option value="final">Final Results</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-search">
+                            <i class="fas fa-search"></i>
+                            Search Results
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sample Results Display -->
+            <div id="results-display" class="results-display" style="display: none;">
+                <div class="student-info-card slide-in-left">
+                    <div class="student-header">
+                        <div class="student-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="student-details">
+                            <h3 id="student-name">Ahmed Mohamed</h3>
+                            <p id="student-grade">Grade 5 - Section A</p>
+                            <p id="student-id-display">Student ID: STU001</p>
+                        </div>
+                        <div class="overall-gpa">
+                            <span class="gpa-label">Overall GPA</span>
+                            <span class="gpa-value" id="overall-gpa">3.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-table-container slide-in-right">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Midterm</th>
+                                <th>Final Exam</th>
+                                <th>Activities</th>
+                                <th>Total</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>85</td>
+                                <td>88</td>
+                                <td>90</td>
+                                <td>87</td>
+                                <td>A-</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>English Language</td>
+                                <td>92</td>
+                                <td>89</td>
+                                <td>95</td>
+                                <td>91</td>
+                                <td>A</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>78</td>
+                                <td>82</td>
+                                <td>85</td>
+                                <td>81</td>
+                                <td>B+</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Arabic Language</td>
+                                <td>88</td>
+                                <td>86</td>
+                                <td>92</td>
+                                <td>88</td>
+                                <td>A-</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Social Studies</td>
+                                <td>75</td>
+                                <td>79</td>
+                                <td>82</td>
+                                <td>78</td>
+                                <td>B</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Physical Education</td>
+                                <td>95</td>
+                                <td>93</td>
+                                <td>98</td>
+                                <td>95</td>
+                                <td>A+</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Art</td>
+                                <td>90</td>
+                                <td>88</td>
+                                <td>92</td>
+                                <td>90</td>
+                                <td>A</td>
+                                <td><span class="status-pass">Pass</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="performance-summary slide-in-up">
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Academic Performance</h4>
+                            <p class="performance-excellent">Excellent</p>
+                            <small>Above average in all subjects</small>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>Class Rank</h4>
+                            <p class="rank-number">3rd</p>
+                            <small>Out of 25 students</small>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4>Attendance Rate</h4>
+                            <p class="attendance-rate">95%</p>
+                            <small>Excellent attendance</small>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Teacher's Note</h4>
+                            <p class="teacher-note">Outstanding student with excellent participation and behavior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions slide-in-up-delay">
+                    <button class="btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Report
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-print"></i>
+                        Print Results
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Email Results
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Access Sample Students -->
+            <div class="quick-access fade-in-up-delay-2">
+                <h3>Quick Access - Sample Students</h3>
+                <div class="sample-students">
+                    <button class="sample-btn" onclick="loadSampleResult('STU001', 'Ahmed Mohamed', 'Grade 5')">
+                        STU001 - Ahmed Mohamed
+                    </button>
+                    <button class="sample-btn" onclick="loadSampleResult('STU002', 'Sara Ali', 'Grade 5')">
+                        STU002 - Sara Ali
+                    </button>
+                    <button class="sample-btn" onclick="loadSampleResult('STU003', 'Omar Hassan', 'Grade 6')">
+                        STU003 - Omar Hassan
+                    </button>
+                    <button class="sample-btn" onclick="loadSampleResult('STU004', 'Fatima Ahmed', 'Grade 4')">
+                        STU004 - Fatima Ahmed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Excellence Academy</h3>
+                    <p>Committed to providing quality education and nurturing future leaders.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Cairo, Egypt</p>
+                    <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@excellenceacademy.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Excellence Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2001066883114" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
